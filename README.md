@@ -4,13 +4,21 @@ rBot is a user-friendly, easy-to-use, Discord.js selfbot written in in discord.j
 
 [A brief description of a selfbot](#a-brief-description-of-a-selfbot)
 [A few rules](#a-few-rules)
+
 [Getting your token](#getting-your-token)
+
 [Installing Node](#installing-node)
+
 [Download the bot](#download-the-bot)
+
 [Edit config files](#edit-config-files)
+
 [Start the bot](#start-the-bot)
+
 [Updating the bot](#updating-the-bot)
+
 [FAQ](#faq)
+
 [Credits](#credits)
 
 # A brief description of a Selfbot:

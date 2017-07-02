@@ -41,6 +41,6 @@ exports.conf = {
 
 exports.help = {
     name: 'userinfo',
-    decription: "testing.",
+    description: "get info about a yourself, or a mentioned user.",
     usage: 'userinfo [mention]'
 };

@@ -9,6 +9,7 @@ exports.run = async (client, msg, args) => {
    let result = await exec(input);
     let embed = new Discord.RichEmbed()
     .setColor('RANDOM')
+    .setTimestamp()
     .setAuthor('Shell Execution', 'https://codemaxx.github.io/assets/images/emoji/terminal.png')
     .addField(':outbox_tray: Output',`\`\`\`\n${result.stdout}\n\`\`\``)
     .setFooter('rBot')
@@ -20,6 +21,7 @@ exports.run = async (client, msg, args) => {
       const outerr = require('util').inspect(result.stderr)
       let embed2 = new Discord.RichEmbed()
       .setColor('RANDOM')
+      .setTimestamp()
       .setTitle('Uh oh..there was an error')
       .addField(`Output',``\`\`\`\n${outerr}\n\`\`\``)
       .setFooter('rBot')

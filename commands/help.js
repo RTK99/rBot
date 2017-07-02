@@ -9,6 +9,7 @@ exports.run = (client, msg, args) => {
         const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);
         let embed = new Discord.RichEmbed()
              .setColor('RANDOM')
+             .setTimestamp()
              .addField('Commands List', `To get more info about a command, type ${config.prefix}help [command]`)
              .setDescription(`${client.commands.map(c => `${c.help.name} ${' '.repeat(longest - c.help.name.length)}~ ${c.help.description}`).join('\n')}`)
              .setFooter('rBot')
@@ -19,8 +20,9 @@ exports.run = (client, msg, args) => {
              command = client.commands.get(command);
              let embed = new Discord.RichEmbed()
                 .setTitle(`${config.prefix}${command.help.name}`)
+                .setTimestamp()
                 .setColor('RANDOM')
-                .setDescription(`${command.help.description}\n**Usage:** ${command.help.usage}`)
+                .setDescription(`${command.help.description}\n\n**Usage:** ${command.help.usage}`)
                 .setFooter('rBot')
                 msg.channel.send({embed})
         }

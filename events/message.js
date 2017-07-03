@@ -15,13 +15,11 @@ module.exports = msg => {
  
     const args = msg.content.split(' ');
     const command = args.shift().slice(config.prefix.length)
-
+    const commandFile = require(`../commands/${command}`);
+    
     try {
-        let commandFile = require(`../commands/${command}`);
         commandFile.run(client, msg, args);
     } catch (err) {
         console.log(`Failed to load command ${command}`);
     }
 };
-
-

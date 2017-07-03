@@ -1,6 +1,6 @@
 exports.run = (client, msg, args) => {
     if (args.length < 1) {
-        throw 'You must have something to upload!';
+        msg.reply('You must have something to upload!');
     }
 
     let parsed = client.utils.parseArgs(args, 'r');
@@ -8,7 +8,7 @@ exports.run = (client, msg, args) => {
     msg.edit(':arrows_counterclockwise: Uploading...').then(() => {
         client.utils.hastebinUpload(parsed.leftover.join(' ')).then(({url, rawUrl}) => {
             if (!url) {
-                msg.error('Failed to upload, no key was returned!');
+                msg.reply('Failed to upload, no key was returned!');
                 return;
             }
             if (parsed.options.r) {
@@ -17,7 +17,7 @@ exports.run = (client, msg, args) => {
                 msg.edit(`:white_check_mark: ${url}`);
             }
         }).catch(err => {
-            msg.error(`:no_entry_sign: Failed to upload: ${err}`, 5000);
+            msg.reply(`:no_entry_sign: Failed to upload: ${err}`, 5000);
         });
     });
 };

@@ -2,7 +2,7 @@ const config = require('../config.json')
 module.exports = msg => {
     const client = msg.client;
     if (msg.author.id !== client.user.id) return;
-    if (config.blacklisted_servers.includes(msg.guild.id)) return;
+    if (msg.guild && config.blacklisted_servers.includes(msg.guild.id)) return;
     if (!msg.content.startsWith(config.prefix)) return;
     let cmdName = msg.content.split(' ')[0].slice(config.prefix.length)
     let params = msg.content.split(' ').slice(1);

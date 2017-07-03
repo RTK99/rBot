@@ -9,13 +9,14 @@ exports.run = (client, msg, args) => {
  try {
       const code = args.join(' ');
       let evaled = eval(code);
-      let evaltime = [Date.now(evaled)]
+      let evaltime = [Math.floor(Date.now(evaled))]
       if (typeof evaled !== 'string')
         evaled = require('util').inspect(evaled);
         if (evaled.includes(msg.client.token)) evaled = evaled.replace(client.token, 'Not for your prying eyes.');
         if (evaled.includes(client.token)) evaled = evaled.replace(client.token, 'Not for your prying eyes.');
+        var timestamp = [Math.floor(Date.now())]
         let embed = new Discord.RichEmbed()
-        .setTitle(`Success, ${Math.round(evaltime) - msg.createdTimestamp}ms`)
+        .setTitle(`Success, ${timestamp - msg.createdTimestamp}ms`)
         .setTimestamp()
         .setAuthor('Node.js Execution', 'https://cdn.discordapp.com/attachments/321417443585032203/327509162374201345/icon-node_js.png')
         .setColor('RANDOM')

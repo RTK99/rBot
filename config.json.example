@@ -1,5 +1,5 @@
 {
  "token": "TOKEN_HERE", 
  "prefix": "PREFIX_HERE",
- "blacklisted_servers": ["Example"] //For multiple servers do ["Example1", "Example2"], so on, so forth
+ "blacklisted_servers": ["ExampleID"]
 }

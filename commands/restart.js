@@ -1,5 +1,5 @@
 exports.run = (client, msg) => {
-    msg.edit('Restarting rBot... :thumbsup:').then(()=> {
+    msg.edit('Restarting rBot... :thumbsup:').then(() => {
         process.exit(42);
     });
 };

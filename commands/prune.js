@@ -8,7 +8,7 @@ exports.run = async (client, msg, args) => {
         return Promise.all(
             prunable.map(m => m.delete())
         ).then(() => {
-            msg.channel.send(`:white_check_mark: Pruned \`${prunable.size}\` messages.`).then(m => m.delete(400000));
+            msg.channel.send(`:white_check_mark: Pruned \`${prunable.size}\` messages.`).then(m => m.delete({timeout: 2000}));
         });
     }).catch(msg.error);
 };
@@ -21,5 +21,5 @@ exports.conf = {
 exports.help = {
     name: "prune",
     description: "A convenient way to delete your own messages.",
-    usage: 'prune [amount]',
+    usage: 'prune [amount]'
 };

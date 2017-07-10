@@ -8,7 +8,7 @@ exports.run = (client, msg, args) => {
                 .catch(msg.error)
                 .then(() => {
                     msg.channel.send(`<:swift:230345895852507136> Purged \`${count}\` messages.`)
-                        .then(m => m.delete(400000));
+                        .then(m => m.delete({timeout: 2000}));
                 });
         }).catch(msg.error);
 };

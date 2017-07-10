@@ -1,5 +1,4 @@
 const giphy = require('giphy-api')();
-const Discord = require('discord.js')
 
 exports.run = (client, msg, args) => {
     if (args.length < 1) {

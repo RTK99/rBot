@@ -1,14 +1,16 @@
 exports.run = async (client, msg, args) => {
     const game = args.join(' ')
     if (!game) {
+        msg.delete()
         await client.user.setGame(null, null)
         msg.reply('Successfully cleared your game!').then(m => {
-            m.delete(3000)
+            m.delete({timeout: 2000})
         })
     } else {
+    msg.delete()
     await client.user.setGame(game)
     msg.reply(`Successfully changed game to **${game}**!`).then(m => {
-        m.delete(3000)
+        m.delete({timeout: 2000})
     })
     }
 }

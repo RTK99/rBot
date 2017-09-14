@@ -4,7 +4,7 @@ const client = new Ares.Client({
     prefix: '>',
     selfbot: true,
     disabledServers: ['349243932447604736']
-})
+});
 
 client.registerCommands();
 client.login(config.token);

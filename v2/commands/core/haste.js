@@ -8,7 +8,7 @@ module.exports = class HasteCommand extends Command {
             description: 'Uploads code quickly to hastebin.',
             usage: '[code]',
             aliases: ['hastebin']
-        })
+        });
     }
 
     async run (message, args) {
@@ -18,4 +18,4 @@ module.exports = class HasteCommand extends Command {
         let res = await hastebin(code, "js");
         return m.edit('Here is your hastebin link: ' + res);
     }
-}
+};

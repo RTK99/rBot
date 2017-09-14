@@ -6,7 +6,7 @@ module.exports = class SetGameCommand extends Command {
             description: 'Sets or removes your current game.',
             usage: '[game]',
             aliases: ['sg', 'game']
-        })
+        });
     }
 
     run (message, args) {
@@ -16,8 +16,8 @@ module.exports = class SetGameCommand extends Command {
             message.edit('Game successfully cleared! :ok_hand:');
         } else {
             this.client.user.setActivity(game);
-            message.edit(`Congrats, you are now playing **${game}**! :ok_hand:`)
+            message.edit(`Congrats, you are now playing **${game}**! :ok_hand:`);
         }
 
     }
-}
+};

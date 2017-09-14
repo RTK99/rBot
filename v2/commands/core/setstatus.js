@@ -6,7 +6,7 @@ module.exports = class StatusCommand extends Command {
             name: 'setstatus',
             description: 'Changes your current status.',
             usage: '[status]',
-            aliases: 'status'
+            aliases: ['status']
         })
     }
 

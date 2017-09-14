@@ -1,4 +1,4 @@
-const { Command } = require('discord.js');
+const { Command } = require('ares.js');
 module.exports = class SetGameCommand extends Command {
     constructor(client) {
         super(client, {

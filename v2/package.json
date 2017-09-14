@@ -9,6 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ares.js": "^1.1.317"
+    "ares.js": "^1.1.317",
+    "uws": "^8.14.1"
   }
 }

@@ -1,11 +1,11 @@
-const { Command } = require('ares.js');
+const { Command } = require('discord.js');
 module.exports = class SetGameCommand extends Command {
     constructor(client) {
         super(client, {
             name: 'setgame',
             description: 'Sets or removes your current game.',
             usage: '[game]',
-            aliases: ['sg']
+            aliases: ['sg', 'game']
         })
     }
 

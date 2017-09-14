@@ -3,7 +3,7 @@ const config = require('./config.json');
 const client = new Ares.Client({
     prefix: '>',
     selfbot: true,
-    disabledServers: []
+    disabledServers: ['349243932447604736']
 })
 
 client.registerCommands();

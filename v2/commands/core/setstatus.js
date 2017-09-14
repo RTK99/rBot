@@ -29,10 +29,10 @@ module.exports = class StatusCommand extends Command {
         if (!s) return message.edit('No status specified.');
         let statuss = statuses[status.toLowerCase()];
         if (!statuss) {
-            return msg.edit(`​Ya flop you provided a invaild status`​);
+            return message.edit(`​Ya flop you provided a invaild status`​);
         }
-        msg.client.user.setStatus(statuss).then(u => message.edit(`​Status changed to ${statuss}.`​)).catch(e => {
-            msg.edit(`​**Bad,** error while trying to changing status for ${msg.client.user.tag} to: ${statuss}.\n\`​\`​\`​${e}\`​\`​\`​`​);
+        message.client.user.setStatus(statuss).then(u => message.edit(`​Status changed to ${statuss}.`​)).catch(e => {
+            message.edit(`​**Bad,** error while trying to changing status for ${message.client.user.tag} to: ${statuss}.\n\`​\`​\`​${e}\`​\`​\`​`​);
         });
     }
 }

@@ -1,0 +1,14 @@
+{
+  "name": "v2-rbot",
+  "version": "1.0.0",
+  "description": "rBot, version 2!",
+  "main": "run.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ares.js": "^1.1.317"
+  }
+}

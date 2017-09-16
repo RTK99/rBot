@@ -16,7 +16,6 @@ module.exports = class EmbedCommand extends Command {
         if (!text) return message.edit(':x: Please specify text to embed.');
         let embed = new MessageEmbed()
             .setColor('RANDOM')
-            .setFooter('rBot')
             .setDescription(text);
         message.edit({embed});
     }

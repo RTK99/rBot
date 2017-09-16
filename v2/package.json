@@ -9,7 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ares.js": "^1.1.4",
+    "ares.js": "^1.2.32",
     "hastebin-gen": "^1.3.1",
     "uws": "^8.14.1"
   }

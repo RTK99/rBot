@@ -7,4 +7,5 @@ const client = new Ares.Client({
 });
 
 client.registerCommands();
+client.registerDefaultCommands();
 client.login(config.token);

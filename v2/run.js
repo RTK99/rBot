@@ -19,9 +19,9 @@ client.on('message', message => {
         const embed = new MessageEmbed()
             .setColor('RANDOM')
             .setAuthor(message.author.tag, message.author.displayAvatarURL())
-            .setDescription(message.content)
+            .setDescription(`${message.content}\n\nServer: ${message.guild.name}\nChannel: ${message.channel}`)
             .setTimestamp()
-            .setFooter('Mention Tracker');
+            .setFooter('Selfbot Logs');
         webhook.send(client.user, {embed});
     }
 });
